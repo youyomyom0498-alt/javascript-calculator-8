@@ -1,6 +1,6 @@
 import { Console } from "@woowacourse/mission-utils";
 
-export function handleError(errorMessage) {
-    Console.print(`[ERROR] ${errorMessage}`);
+export function handleError(error) {
+    Console.print(`[ERROR] ${error.message}`);
     process.exit(1);
 }

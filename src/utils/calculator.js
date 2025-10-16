@@ -26,3 +26,7 @@ export function splitByDelimiter (inputWithoutCustom, customDelimiter) {
 
     return numbers;
 }
+
+export function addNumbers (numbers) {
+    return numbers.reduce((num, acc) => num + acc, 0);
+}

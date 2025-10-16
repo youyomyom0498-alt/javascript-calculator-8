@@ -8,6 +8,11 @@ export async function getInput () {
 
 export function parseCustomDelimiter (INPUT) {
     const nomalizedInput = INPUT.replace(/\\n/g, '\n');
+
+    if(!nomalizedInput.match(CUSTOM_DELIMITER_PATTERN)){
+        return { customDelimiter: null, inputWithoutCustom: INPUT };
+    }
+
     const match = nomalizedInput.match(CUSTOM_DELIMITER_PATTERN);
     const customDelimiter = match[1];
     const inputWithoutCustom = nomalizedInput.replace(CUSTOM_DELIMITER_PATTERN, '');

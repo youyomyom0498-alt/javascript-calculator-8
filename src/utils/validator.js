@@ -5,3 +5,9 @@ export function validateNegative (numbers) {
         throw new Error(ERROR_MESSAGES.NEGATIVE_NUMBER);
     }
 }
+
+export function validateInvalidCharacter (numbers) {
+    if(numbers.some((n) => isNaN(n))){
+        throw new Error(ERROR_MESSAGES.INVALID_CHARACTER);
+    }
+}

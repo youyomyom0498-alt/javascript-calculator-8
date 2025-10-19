@@ -14,7 +14,7 @@ class App {
       validateInvalidCharacter(numbers);
       
       const calculatedSum = addNumbers(numbers);
-      Console.print(calculatedSum);
+      Console.print(`결과 : ${calculatedSum}`);
     } catch (error){
       handleError(error);
     }
